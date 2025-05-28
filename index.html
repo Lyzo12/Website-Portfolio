@@ -2,29 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nomalizo Nkosi - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Hello my name is Nomalizo</h1>
-        <p>Welcome to my portfolio website</p>
-    </header>
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I am a software developer.</p>
-    </section>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/name_logoo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Junior Software Developer</p>
+            <h1>Hi, My name is <span>Nomalizo Nkosi</span><br>based in the City of Johannesburg</h1>
+        </div>
+    </div>
+</div>
 
-    <section class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Portfolio Website</li>
-        </ul>
-    </section>
+<!-------- about -------->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            <img src="Images/profile_photo.JPG">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I am a junior software developer who is experienced in mobile developement
+                I have worked in assisting projects that use C#, Xamarin, and .NET MUAI.
+                I have assisted in the development of both Android and iOS mobile app development.</p>
 
-    <footer>
-        <p>Contact me at nkosinomalizo@gmail.com</p>
-    </footer>
-    
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+
+        <!-----Skills---->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Mobile Development</span><br>Front end development</li>
+                        <li><span>Web Development</span><br>Web design portfolio</li>
+                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+
+        <!-----Experience---->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 August</span><br>Development of app using C#, Xamarin and .NET MAUI</li>
+                        <li><span>2023 August</span><br>Development of android apps using Kotlin, Java, and XML</li>
+                        <li><span>2024 August</span><br>Development of iOS mobile apps using Swift and SwiftUI</li>
+                    </ul>
+                </div>
+
+        <!-----Education---->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016</span><br>National Senior Certificate at Ndlela Secondary School</li>
+                        <li><span>2021</span><br>Diploma in Information of Technology at Vaal University of Technology</li>
+                       
+                    </ul>
+                </div>
+        </div>
+        </div>       
+    </div>
+   </div>
+
+   <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+   </script>
+
 </body>
 </html>
