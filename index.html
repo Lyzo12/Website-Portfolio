@@ -13,13 +13,15 @@
     <div class="container">
         <nav>
             <img src="Images/name_logoo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Junior Software Developer</p>
@@ -139,6 +141,30 @@
     </div>
    </div>
 
+   <!----contact---->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> nkosinomalizo@gmail.com</p>
+                
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-solid fa-square-envelope"></i></a>
+                </div>
+                <a href="Images/N NKOSI CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right"></div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Nomalizo.</p>
+        </div>
+         
+    </div>
+   </div>
+
    <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -154,6 +180,19 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 
+   </script>
+
+   <script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
    </script>
 
 </body>
